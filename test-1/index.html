@@ -10,14 +10,14 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Document</title>
+	<title>A</title>
 </head>
 
 <body>
 	<header class="header">
 		<div class="header-container">
 			<div class="left-nav">
-				<li class="register">Hi! <a href="#">Sign in</a> <span class="d-764">or</span> <a href="#" class="d-764">register</a></li>
+				<li class="register">Hi! <a href="#">Sign in</a> <span class="d-999">or</span> <a href="#" class="d-999">register</a></li>
 				<li><a href="#">Daily Deals</a> </li>
 				<li><a href="#">Help & Contact</a></li>
 			</div>
@@ -33,32 +33,41 @@
 
 	</header>
 	<section class="main-body">
-		<div class="searchbar-container">
-			<div class="logo-container">
-				<img src="images/logo.png" alt="" class="logo">
-				<div class="category">
-					<a href="#" class="text">Shop by category</a>
-					<i class='bx bx-chevron-down bx-xs'></i>
+		<div class="container">
+			<div class="searchbar-container">
+				<div class="logo-container">
+					<img src="images/logo.png" alt="" class="logo">
+					<div class="category">
+						<a href="#" class="text">Shop by category</a>
+						<i class='bx bx-chevron-down bx-xs'></i>
+					</div>
+				</div>
+				<div class="searchform-div">
+					<form method="get" class="searchform">
+						<!-- <input type="search" placeholder=" &#128269; Search for anything" name="search" class="searchinput"> -->
+						<div class="searchinput">
+							<input type="search">
+							<div>
+								<i class='bx bx-search'></i>
+								<span>Search for anything</span>
+							</div>
+						</div>
+						<select name="category" id="" class="searchCategory">
+							<option value="allcategory">All category</option>
+							<option value="Art">Art</option>
+							<option value="Baby">Baby</option>
+							<option value="Books">Books</option>
+							<option value="Tech">Tech</option>
+						</select>
+					</form>
+				</div>
+				<div class="searchbutton">
+					<button type="submit" class="submitButton"><i class='bx bx-search'></i><span>Search</span></button>
+					<a href="#" class="text">Advance</a>
 				</div>
 			</div>
-			<div>
-				<form action="" method="get" class="searchform">
-					<input type="search" placeholder=" &#128269; Search for anything" name="search" class="searchinput">
-					<select name="category" id="" class="searchCategory">
-						<option value="allcategory">All category</option>
-						<option value="Art">Art</option>
-						<option value="Baby">Baby</option>
-						<option value="Books">Books</option>
-						<option value="Tech">Tech</option>
-					</select>
-					
-				</form>
-			</div>
-			<div class="searchbutton">
-				<button type="submit" class="submitButton">Search</button>
-				<a href="#" class="text">Advance</a>
-			</div>
 		</div>
+		
 	</section>
 	<footer>
 

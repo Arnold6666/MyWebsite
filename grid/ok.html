@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*, *::after, *::before {
+			box-sizing: border-box;
+		}
+		.background-style{
+			background-color: lightblue;
+			border: 1px dashed silver;
+			width: 500px;
+			height: 500px;
+			margin-top: 2rem;
+			resize: both;
+			overflow: auto;
+		}
+		.text-align{
+			text-align: center;
+			font-size: 2rem;
+		}
+		.container-1{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.item-1{
+			background-color: lightcoral;
+			border: 1px solid red;
+			border-radius: 10px;
+			margin: 5px;
+			/* flex-grow flex-shrink flex-basis */
+			flex: 1 1 150px;
+		}
+		.container-2{
+			display: grid;
+			grid-template-columns: minmax(150px, 25%) 1fr;
+			margin-top: 10px;
+			padding: 0;
+		}
+		.sidebar{
+			background-color: palegoldenrod;
+		}
+		.content{
+			background-color: lightblue;
+			height: 100%;
+		}
+		.container-3{
+			display: grid;
+			height: 100vh;
+			grid-template: auto 1fr auto/auto 1fr auto;
+			margin-bottom: 20px;
+		}
+		header{
+			background: lavenderblush;
+			grid-column: 1/4;
+			padding: 2rem;
+		}
+		.left-sidebar{
+			background: cyan;
+			grid-column: 1/2;
+		}
+		main{
+			background: peachpuff;
+			grid-column: 2/3;
+		}
+		.right-sidebar{
+			background: lightgoldenrodyellow;
+			grid-column: 3/4;
+		}
+		footer{
+			background: rebeccapurple;
+			grid-column: 1/4;
+			padding: 2rem;
+		}
+		.dashed-border{
+			border: 1px dashed silver;
+		}
+		.container-4{
+			height: auto;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1rem;
+		}
+		.card{
+			background: lemonchiffon;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 1rem;
+		}
+		.photo{
+			background-color: lightblue;
+			height: 100px;
+			width: 120px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container-1 background-style">
+		<div class="item-1 text-align">1</div>
+		<div class="item-1 text-align">2</div>
+		<div class="item-1 text-align">3</div>
+	</div>
+	<div class="container-2 background-style">
+		<div class="sidebar text-align">
+			Min: 150px
+			<br>
+			Max: 25%
+		</div>
+		<div>
+			<p class="content text-align">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, sed quo similique nobis voluptatum repellat cum, at ipsum voluptatibus enim minus quam harum optio rerum nemo fugiat! Doloribus, dolor veritatis.</p>
+		</div>
+	</div>
+	<div class="container-3 background-style">
+		<header class="text-align">
+			<h1>header</h1>
+		</header>
+		<div class="left-sidebar text-align dashed-border">Left Sidebar</div>
+		<main class="text-align dashed-border">Main content</main>
+		<div class="right-sidebar text-align dashed-border">Right Sidebar</div>
+		<footer class="text-align">Footer Content 2022</footer>
+	</div>
+	<div class="container-4 background-style">
+		<div class="card dashed-border">
+			<h1>Title -Card 1</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum autem labore, ex dicta distinctio explicabo exercitationem atque repellendus animi corporis dolore reiciendis perspiciatis fuga, in ipsum nisi obcaecati dignissimos eius!</p>
+			<div class="photo dashed-border"></div>
+		</div>
+		<div class="card dashed-border">
+			<h1>Title -Card 2</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum autem labore, ex dicta distinctio explicabo exercitationem atque repellendus animi corporis dolore reiciendis perspiciatis fuga, in ipsum nisi obcaecati dignissimos eius!</p>
+			<div class="photo dashed-border"></div>
+		</div>
+		<div class="card dashed-border">
+			<h1>Title -Card 3</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum autem labore, ex dicta distinctio explicabo exercitationem atque repellendus animi corporis dolore reiciendis perspiciatis fuga, in ipsum nisi obcaecati dignissimos eius!</p>
+			<div class="photo dashed-border"></div>
+		</div>
+	</div>
+</body>
+
+</html>

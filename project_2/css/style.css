@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;700&display=swap');
+
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+
+:root{
+	--header-height: 3rem;
+	--sidebar-width: 68px;
+}
+
+body{
+	font-family: 'Noto Sans TC', sans-serif;
+	margin-top: calc(var(--header-height) + 1rem);
+	padding-left: 1rem;
+
+	transition: .5s;
+}
+
+a{
+	text-decoration: none;
+}
+
+.header{
+	width: 100%;
+	height: var(--header-height);
+	background-color: #FCF2F5;
+	padding: 0 1rem;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	align-items: center;
+	/* justify-content: flex-end; */
+	transition: 0.5s;
+}
+
+.header-img{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-left: auto;
+	display: flex;
+	justify-content: center;
+	transition: .5s;
+}
+
+.header-img img{
+	width: 35px;
+}
+
+.left-navbar{
+	position: fixed;
+	width: var(--sidebar-width);
+	height: 100vh;
+	background-color: #ff4685;
+	left: -30%;
+	top: 0;
+	transition: width 0.5s;
+	padding: .5rem 1rem 0 0;
+	transition: .5s;
+}
+
+.left-navbar:hover{
+	width: 13rem;
+}
+
+.nav{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.nav-logo{
+	margin-bottom: 2rem;
+}
+
+.nav-logo, .nav-link{
+	display: grid;
+	grid-template-columns: max-content max-content;
+	align-items: center;
+	column-gap: 1rem;
+	padding: 0.5rem 0 .5rem 1.5rem;
+}
+
+.nav-logo-icon{
+	font-size: 1.25rem;
+	color: #F7F6FB;
+}
+
+.nav-logo-name{
+	color: #F7F6FB;
+	font-weight: 700;
+}
+
+.nav-link{
+	color: #F993AD;
+	font-weight: 100;
+	margin-bottom: 1.5rem;
+}
+
+.nav-link:hover{
+	color: #F7F6FB;
+}
+
+.nav-link.active{
+	color: #F7F6FB;
+	font-weight: 500;
+}
+.nav-link.active::before{
+	content: "";
+	width: 2px;
+	height: 32px;
+	background-color: #F7F6FB;
+	position: absolute;
+	left: 0;
+}
+
+.nav-icon{
+	font-size: 1.25rem;
+}
+h1{
+	font-weight: 100;
+	color: #ff4685;
+}
+
+@media screen and (min-width:768px){
+	body{
+		margin-top: calc(var(--header-height) + 2rem);
+		padding-left: calc(var(--sidebar-width) + 2rem)
+	}
+	.header{
+		height: calc(var(--header-height) + 1rem);
+	}
+	.header-img{
+		width: 40px;
+		height: 40px;
+	}
+	.header-img img{
+		width: 40px;
+	}
+	.left-navbar{
+		left: 0;
+	}
+}

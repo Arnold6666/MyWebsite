@@ -1,0 +1,45 @@
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+
+.container{
+	padding: 1rem;
+}
+
+.parent{
+	position: relative;
+	z-index: 5;
+}
+
+.content{
+	background-color: white;
+	font-size: 1.5rem;
+	font-family: sans-serif;
+	box-shadow: 0 0 25px grey;
+	padding: 30px;
+	border-radius: 15px;
+	margin: 50px 0;
+
+	position: relative;
+	z-index: 100;
+}
+
+.dog-top, .dog-bottom{
+	width: 250px;
+	height: 250px;
+	background-image: url(../images/dog.png);
+	background-size: cover;
+	background-position: center;
+
+	position: relative;
+	z-index: 6;
+}
+
+.dog-top{
+	margin-bottom: -100px;
+}
+
+.dog-bottom{
+	transform: rotate(180deg);
+	margin-top: -84px;
+}

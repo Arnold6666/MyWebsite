@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*, *::after, *::before {
+			box-sizing: border-box;
+			margin: 0;
+		}
+		.flex{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			column-gap: 10px;
+			background-color: aquamarine;
+		}
+
+		.flex-item{
+			
+			background-color: lightgoldenrodyellow;
+			padding: 20px;
+			text-align: center;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.flex-item-c{
+
+		}
+		.flex-item-r{
+
+		}
+		.img{
+			width: 80%;
+			height: 100px;
+			height: 100px;
+			background-color: black;
+			margin: auto;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<section>
+		<div class="flex">
+			<div class="flex-item flex-item-l">
+				<h1>Title - Card 1</h1>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, velit cum? Provident, fugiat labore porro ipsum ullam, iure nostrum numquam mollitia maxime, possimus earum? Aspernatur eligendi dolorum recusandae vero doloribus.</p>
+				<div class="img"></div>
+			</div>
+			<div class="flex-item flex-item-c">
+				<h1>Title - Card 1</h1>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, odit.</p>
+				<div class="img"></div>
+			</div>
+			<div class="flex-item flex-item-r">
+				<h1>Title - Card 1</h1>
+				<p>Lorem, ipsum.</p>
+				<div class="img"></div>
+			</div>
+		</div>
+	</section>
+	
+</body>
+
+</html>

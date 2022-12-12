@@ -1,0 +1,23 @@
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+
+.container{
+	width: 1000px;
+	margin: 0 auto;
+	display: grid;
+	/* grid-template-rows: repeat(2, 150px); */
+	/* grid-template-rows: repeat(2, min-content); */
+	/* grid-template-rows: 150px min-content; */
+	grid-template-rows: repeat(2, minmax( 150px, min-content ));
+	grid-template-columns: min-content 1fr 1fr min-content
+}
+
+.item{
+	background-color: orangered;
+	border: 2px dashed white;
+	font-size: 30px;
+	font-family: sans-serif;
+	padding: 10px;
+	color: white;
+}

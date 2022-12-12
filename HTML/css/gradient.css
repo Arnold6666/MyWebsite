@@ -1,0 +1,12 @@
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+
+.gradient{
+	/* width: 400px; */
+	height: 400px;
+	border: 1px solid gray;
+	/* border-radius: 50%; */
+	/* background-image: repeating-linear-gradient(to right top,red 49%,blue ,yellow 50%); */
+	background-image: radial-gradient(farthest-corner at 100px 100px ,darkorange, yellow);
+}

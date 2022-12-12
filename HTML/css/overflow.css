@@ -1,0 +1,13 @@
+*, *::after, *::before{
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+.item{
+	background-color: gold;
+	border: 2px dashed red;
+	width: 180px;
+	font-size: 1.5rem;
+	text-overflow: ellipsis;
+	overflow-x: hidden;
+}

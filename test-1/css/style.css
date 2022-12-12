@@ -1,0 +1,166 @@
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	font-family: 'Martel Sans', sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+li{
+	list-style: none;
+}
+
+/* header */
+
+.header-container{
+	font-size: .75rem;
+	margin: 0 auto;
+	max-width: 1312px;
+	height: 28px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 32px;
+
+	column-gap: 200px;
+}
+.left-nav, .right-nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.left-nav{
+	width: 300px;
+}
+
+.register>a{
+	color: #0654BA;
+}
+
+.right-nav{
+	width: 370px;
+}
+
+.right-nav .icon{
+	display: flex;
+	align-items: center;
+}
+
+.right-nav .bell, .cart{
+	font-size: 22px;
+}
+
+@media screen and (max-width:1023px){
+	.right-nav li:nth-of-type(1){
+		display: none;
+	}
+	.right-nav{
+		width: 300px;
+		flex-shrink: 0;
+	}
+	.left-nav{
+		width: 280px;
+		flex-shrink: 0;
+	}
+}
+@media screen and (max-width:1000px){
+	.right-nav li:nth-of-type(3){
+		display: none;
+	}
+	.d-764{
+		display: none;
+	}
+}
+@media screen and (max-width:666px){
+	.right-nav{
+		width: 150px;
+	}
+	.left-nav{
+		width: auto;
+	}
+	.left-nav li:nth-of-type(2), li:nth-of-type(3){
+		display: none;
+	}
+}
+
+/* header end */
+
+/* section main-body */
+section.main-body{
+	border-bottom: 1px solid rgb(197, 197, 197);
+	border-top: 1px solid rgb(197, 197, 197);
+}
+.searchbar-container{
+	width: 1312px;
+	height: 60px;
+	display:grid;
+	margin: auto;
+	/* justify-content: space-between; */
+	grid-template-columns: 300px auto 300px;
+	border-bottom: 1px solid rgb(197, 197, 197);
+}
+.logo-container{
+	display: flex;
+	justify-content: space-around;
+}
+.category{
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+}
+
+.category .text{
+	color: #0654BA;
+}
+
+.logo{
+	width: 120px;
+	padding-left: 10px;
+}
+
+.searchform, .searchbutton{
+	height: 60px;
+	display: flex;
+	align-items: center;
+}
+.searchinput{
+	width: 100%;
+	padding: 12px 0;
+	margin-left: 10px;
+	border:2px solid black;
+	border-right: none;
+}
+.searchCategory{
+	width: 200px;
+	padding: 12px 0;
+	height: 43px;
+	border:2px solid black;
+	border-left: 1px solid gray;
+}
+.searchbutton{
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	margin: 0 10px;
+	justify-content: space-around;
+}
+.submitButton{
+	padding: 12px ;
+	background-color: #2483fe;
+	color: white;
+}
+.searchbutton a{
+	margin-left: 10px;
+}
+.searchbutton a:hover{
+	color: #0654BA;
+}
+
+.searchbutton .text{
+	color: gray;
+}

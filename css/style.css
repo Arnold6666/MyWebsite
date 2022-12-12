@@ -1,0 +1,72 @@
+body{
+	margin: 0;
+}
+table{
+	border-collapse: collapse; 
+	width: 100%; 
+	text-align: center;
+	background-color: gold !important;
+}
+/* .bg-red{
+	background-color: red;
+} */
+
+.caption_table, caption{
+	color: wheat;
+	background-color: black;
+}
+
+.required::before{
+	content: "Before_";
+}
+.required::after{
+	content: "*";
+}
+[redColor$="67"]{
+	background-color: red;
+}
+*{
+	box-sizing: border-box;
+}
+.percent{
+	
+	background-color: pink;
+	width: 50%;
+}
+
+.pixel{
+	background-color: lightblue;
+	width: 200px;
+}
+.parent{
+	font-size: 30px;
+	margin-top: 20px;
+	border: 2px solid black;
+	width: 50%;
+}
+.view-width{
+	width: 50vw;
+	background-color: lightgreen;
+}
+.view-height{
+	background-color: lightslategray;
+	height: 15vh;
+}
+.one-rem{
+	font-size: 1rem;
+}
+.one-em{
+	font-size: 1em;
+}
+.two-rem{
+	font-size: 2rem;
+}
+.two-em{
+	font-size: 2em;
+}
+.one-hundred-percent{
+	font-size: 100%;
+}
+.two-hundred-percent{
+	font-size: 200%;
+}

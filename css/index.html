@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			text-align: center;
+			background-color: red;
+		}
+
+		/* div > span > b{
+			background-color: red;
+		} */
+		/* li.red + li{
+			background-color: gold;
+		} */
+		li:hover {}
+
+		input:checked {
+			margin: 50px;
+		}
+
+		li:not(:hover) {
+			background-color: gold;
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="index.html">主頁</a></li>
+			<li><a href="second.html">二頁</a></li>
+		</ul>
+	</nav>
+	<table border="1" style="background-color: gold;">
+		<thead>
+			<tr>
+				<th>RANK</th>
+				<th>NAME</th>
+				<th>AGE</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Tom</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Mary</td>
+				<td>23</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<table border="1" class="bg-red">
+		<tr>
+			<th>Name</th>
+			<th colspan="2">Telephone Number</th>
+		</tr>
+		<tr>
+			<td>Bill</td>
+			<td>1234</td>
+			<td>5678</td>
+		</tr>
+	</table>
+	<br>
+	<table border="1" class="caption_table">
+		<caption>Custom Telephone Number</caption>
+		<tr>
+			<th>Name</th>
+			<td>Bill</td>
+		</tr>
+		<tr>
+			<th rowspan="2">Telephone Number</th>
+			<td>1234</td>
+		</tr>
+		<tr>
+			<td>5678</td>
+		</tr>
+	</table>
+	<hr>
+	<div class="one-rem">1rem</div>
+	<div class="one-em">1em</div>
+	<div class="one-hundred-percent">100%</div>
+	<div class="two-rem">2rem</div>
+	<div class="two-em">2em</div>
+	<div class="two-hundred-percent">200%</div>
+	<div class="parent">
+		<div class="one-rem">1rem</div>
+		<div class="one-em">1em</div>
+		<div class="one-hundred-percent">100%</div>
+		<div class="two-rem">2rem</div>
+		<div class="two-em">2em</div>
+		<div class="two-hundred-percent">200%</div>
+	</div>
+	<hr>
+	<!-- <div class="percent">percent</div>
+	<div class="pixel">200px</div>
+	<div class="view-width">view-width</div> -->
+	<div class="view-height">view-height</div>
+	<div class="parent">
+		<!-- <div class="percent">percent</div>
+		<div class="pixel">200px</div>
+		<div class="view-width">view-width</div> -->
+		<div class="view-height">view-height</div>
+	</div>
+
+	<input type="checkbox">
+	<div redColor="1234567" class="red">This is a div.</div>
+	<div class="">Another div</div>
+	<span id="blue">This is a span.</span>
+	<div>
+		<span>
+			<b>Nested text</b>
+		</span>
+	</div>
+	<ul>
+		<li>Item 1 </li>
+		<li class="red">Item 2</li>
+		<li>Item 3</li>
+		<li>Item 4</li>
+	</ul>
+	<label class="required">Name</label>
+	<input type="text" required>
+	<button type="button">Submit Form</button>
+	<br><br><br><br><br>
+</body>
+
+</html>

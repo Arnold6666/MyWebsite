@@ -1,0 +1,61 @@
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+
+:root{
+	--container-width: 800px;
+	--container-height: 500px;
+	--box-width: 200px;
+	--box-height: 200px;
+
+	--border-style: 1px solid black;
+}
+
+.container{
+	background-color: lavenderblush;
+	width: var(--container-width,500px);
+	height: var(--container-height);
+	border: var(--border-style);
+}
+
+.box{
+	background-color: peachpuff;
+	width: 200px;
+	height: 200px;
+
+	--border-style: 5px dashed rgb(127, 70, 0);
+	border: var(--border-style);
+	/* transition: transform 1s cubic-bezier(0.42, 0, 0
+	, 2.77), background-color 1s ;
+	/* transition-timing-function: ease-in-out; */
+	/* transition-delay: 2s;  */
+	/* animation: move 500ms forwards infinite alternate 1s; */
+	/* forwards 保留移動後狀態 4為animation-iteration-count animation-direction控制方向*/
+}
+
+.box-1{
+	background-color: rgb(185, 239, 255);
+	width: 50px;
+	height: 50px;
+
+	border: var(--border-style);
+}
+/* .container:hover .box{ */
+	/* transform: translateX(calc(800px - 200px));
+	background-color: coral; */
+
+	/* animation-play-state: paused; */
+	
+/* } */
+
+/* @keyframes move {
+	25%{
+		transform: translateY(calc(var(--container-height) - var(--box-height)));
+	}
+	75%{
+		transform: translateY(calc(var(--container-height) - var(--box-height))) translateX(calc(var(--container-width) - var(--box-width)));
+	}
+	100% {
+		transform: translateX(calc(var(--container-width) - var(--box-width)));
+	}
+} */

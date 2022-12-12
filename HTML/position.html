@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*,
+		*::after,
+		*::before {
+			box-sizing: border-box;
+		}
+		.text-align{
+			font-size: 2rem;
+			padding: 2rem;
+		}
+		.dashed-border{
+			border:1px dashed silver;
+		}
+
+		.parent {
+			background: lavenderblush;
+			position: relative;
+			height: 200vh;
+
+		}
+
+		.child-1{
+			background: cyan;
+			position: sticky;
+			top: 0px;
+			left: 0px;
+		}
+		.child-2{
+			background: peachpuff;
+		}
+		.child-3{
+			background: lemonchiffon;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="parent text-align dashed-border">Parent
+		<div class="child-1 text-align dashed-border">one</div>
+		<div class="child-2 text-align dashed-border">two</div>
+		<div class="child-3 text-align dashed-border">three</div>
+	</div>
+</body>
+
+</html>

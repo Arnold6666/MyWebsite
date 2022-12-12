@@ -1,0 +1,36 @@
+*{
+	box-sizing: border-box;
+}
+
+.box-item{
+	background-color: hotpink;
+	border: 5px solid mediumvioletred;
+	width: 200px;
+	margin: 20px;
+}
+
+.box-item-1{
+	height: 100px;
+	/* flex-grow: 1; */
+	/* min-height: 100px; */
+	flex-shrink: 0;
+}
+
+.box-item-2{
+	height: 200px;
+	flex-grow: 2;
+	/* min-height: 200px; */
+	flex-basis: 0;
+}
+
+.box-item-3{
+	height: 300px;
+	flex-grow: 1;
+	/* min-height: 300px; */
+	flex-basis: 0;
+}
+
+.flexbox-container{
+	display: flex;
+	justify-content: flex-start;
+}

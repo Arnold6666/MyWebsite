@@ -1,0 +1,184 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+*, *::after, *::before{
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	overflow: hidden;
+}
+
+.universe{
+	height: 100vh;
+	background-image: -o-radial-gradient(#555, #000);
+	background-image: radial-gradient(#555, #000);
+
+	display: -ms-grid;
+
+	display: grid;
+	place-items: center;
+}
+
+.stars{
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../images/stars.png);
+	background-size: cover;
+	background-position: center;
+
+	position: absolute;
+
+	-webkit-animation: star-pulse 2s infinite alternate;
+
+	        animation: star-pulse 2s infinite alternate;
+}
+
+@-webkit-keyframes star-pulse {
+	100% {
+		opacity: .4;
+	}
+}
+
+@keyframes star-pulse {
+	100% {
+		opacity: .4;
+	}
+}
+
+.sun{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-image: -o-radial-gradient(#F5C313,#EC7E08);
+	background-image: radial-gradient(#F5C313,#EC7E08);
+
+	/* position: absolute;
+	left: calc(100% / 2 - 100px);
+	top: calc(100% / 2 - 100px); */
+	-webkit-box-shadow: 0 0 30px #F5C313;
+	        box-shadow: 0 0 30px #F5C313;
+
+	-webkit-animation: sun-fire 2s infinite alternate;
+
+	        animation: sun-fire 2s infinite alternate;
+}
+
+@-webkit-keyframes sun-fire {
+	100% {
+		-webkit-box-shadow: 0 0 100px #F5C313;
+		        box-shadow: 0 0 100px #F5C313;
+	}
+}
+
+@keyframes sun-fire {
+	100% {
+		-webkit-box-shadow: 0 0 100px #F5C313;
+		        box-shadow: 0 0 100px #F5C313;
+	}
+}
+
+.earth_orit{
+	width: 90vh;
+	height: 90vh;
+	border-radius: 50%;
+	border: 2px dashed gold;
+
+	display: -ms-grid;
+
+	display: grid;
+	place-items: center;
+
+	/* position: absolute;
+	left: calc(100% / 2 - 90vh / 2);
+	top: calc(100% / 2 - 90vh / 2); */
+
+	-webkit-animation: spin 30s linear infinite;
+
+	        animation: spin 30s linear infinite;
+}
+
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+
+.moon_oribt{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border: 2px dashed gold;
+
+	position: absolute; 
+	left: calc( -120px / 2);
+	top: calc(100% / 2 - 120px / 2); 
+
+	display: -ms-grid; 
+
+	display: grid;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+
+	-webkit-animation: spin 30s linear infinite;
+
+	        animation: spin 30s linear infinite;
+}
+
+.earth{
+	width: 80px;
+	height: 90px;
+	border-radius: 50%;
+
+	-webkit-animation: dontspin 30s linear infinite;
+
+	        animation: dontspin 30s linear infinite;
+}
+
+@-webkit-keyframes dontspin {
+	100%{
+		-webkit-transform: rotate(-720deg);
+		        transform: rotate(-720deg);
+	}
+}
+
+@keyframes dontspin {
+	100%{
+		-webkit-transform: rotate(-720deg);
+		        transform: rotate(-720deg);
+	}
+}
+
+.earth img{
+	width: 80px;
+	height: 80px;
+}
+
+.moon{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-image: -o-radial-gradient(#ddd, #888);
+	background-image: radial-gradient(#ddd, #888);
+
+	position: absolute;
+	left: calc(-30px/2);
+}

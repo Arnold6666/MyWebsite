@@ -1,0 +1,24 @@
+body{
+	font-size: 8rem;
+	color: blue;
+	font-weight: bold;
+}
+
+@media all and (min-width:30rem){
+	body{
+		background-color: gold;
+	}
+	.title-1{
+		color: red;
+	}
+}
+@media (orientation:portrait){
+	.title-2{
+		color: aqua;
+	}
+}
+@media (orientation:landscape){
+	.title-1{
+		color: pink;
+	}
+}

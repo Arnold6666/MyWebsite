@@ -1,0 +1,40 @@
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+
+.grid-item{
+	background-color: gold;
+	border: 5px solid purple;
+	font-size: 25px;
+}
+
+.grid-container{
+	display: grid;
+	grid-template-columns: repeat( 3, 1fr );
+	grid-template-rows: minmax(150px, auto);
+	grid-auto-rows: 150px;
+	/* column-gap: 10px; */
+	/* row-gap: 10px; */
+	gap: 10px;
+	grid-template-areas: 
+	"a a"
+	"sidebar content"
+	"sidebar content"
+	;
+}
+
+.grid-item-1{
+	/* grid-area: a; */
+	/* grid-column-start: 1;
+	grid-column-end: -1; */
+	/* grid-column: 1 / -1; */
+	/* grid-column: span 3; */
+}
+
+.grid-item-2{
+	/* grid-row: span 3; */
+}
+
+.grid-item-3{
+	/* grid-area: content; */
+} 

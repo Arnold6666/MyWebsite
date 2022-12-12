@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.background-style{
+			background-color: lightblue;
+			border: 1px dashed silver;
+			width: 500px;
+			height: 500px;
+			margin-top: 2rem;
+			resize: both;
+			overflow: auto;
+		}
+		.text-align{
+			text-align: center;
+			font-size: 2rem;
+		}
+		.container-1{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.item-1{
+			background-color: lightcoral;
+			border: 1px solid red;
+			border-radius: 10px;
+			margin: 5px;
+			/* flex-grow flex-shrink flex-basis */
+			flex: 1 1 150px;
+
+		}
+		* {
+			box-sizing: border-box;
+		}
+
+		.flexwrap {
+			width: 100%;
+			height: 400px;
+			display: flex;
+			flex-wrap: wrap;
+			background-color: lightblue;
+			justify-content: space-around;
+		}
+
+		.flex-item {
+			border: 5px solid purple;
+			text-align: center;
+			font-size: 30px;
+			border-radius: 10px;
+			margin: 10px;
+			width: 200px;
+			background-color: palevioletred;
+			flex-basis: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container-1 background-style">
+		<div class="item-1 text-align">1</div>
+		<div class="item-1 text-align">2</div>
+		<div class="item-1 text-align">3</div>
+	</div>
+	<div class="flexwrap">
+		<div class="flex-item">1</div>
+		<div class="flex-item">2</div>
+		<div class="flex-item">3</div>
+	</div>
+</body>
+
+</html>

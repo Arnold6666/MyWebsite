@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body{
+	font-family: 'Roboto', sans-serif;;
+	box-sizing: border-box;
+	margin: auto auto;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1{
+	padding-left: 2rem;
+	font-weight: bolder;
+}
+
+button{
+	width: 100px;
+	height: 40px;
+	margin-left: 275px;
+	border: none;
+	color: white;
+	background-color: #0b7cee;
+	border-radius: 10px;
+	font-size: 1rem;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	height: 500px;
+	border-radius: 20px;
+	box-shadow: 0 1px 5px gray;
+	/* align-items: center; */
+	justify-content: center;
+	row-gap: 2rem;
+}
+
+form>div{
+	width: 75%;
+	margin: 0 auto;
+	position: relative;
+}
+
+form input{
+	width: 100%;
+	height: 40px;
+	border-radius: 5px;
+	padding-left: 1rem;
+	border: 1px solid #c6c6c6;
+	transition: 0.5s;
+}
+
+form>div>div{
+	position: absolute;
+	top: 12px;
+	left: 1rem;
+	color: #555;
+	pointer-events: none;
+	transition: .5s;
+}
+
+form input:focus{
+	outline: none;
+	border: 1px solid #0654ba;
+}
+
+form input:focus + div{
+	padding: 0 2px;
+	background-color: white;
+	top: -6px;
+	left: .5rem;
+	color: #0654ba;
+	font-size: .8rem;
+}
+
+.form-input:not(:placeholder-shown).form-input:not(:focus) + .placeholder{
+	padding: 0 2px;
+	background-color: white;
+	top: -6px;
+	left: .5rem;
+	color: #0654ba;
+	font-size: .8rem;
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+:root {
+  --button-color: #1A73E8;
+  --input-color: #80868B;
+  --border-color: #DADCE0;
+
+  --body-font: 'Roboto', sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: .75rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+.animated-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.form {
+  width: 360px;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+.form-title {
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.form-div {
+  position: relative;
+  height: 48px;
+  margin-bottom: 1.5rem;
+}
+
+.form-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: var(--normal-font-size);
+  outline: none;
+  border-radius: .5rem;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+
+  background: none;
+  z-index: 1;
+}
+
+.form-label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  padding: 0 .25rem;
+  color: var(--input-color);
+  background-color: white;
+  font-size: var(--normal-font-size);
+  transition: .3s;
+}
+
+.form-button {
+  display: block;
+  margin-left: auto;
+  padding: .75rem 2rem;
+  border: none;
+  background-color: var(--button-color);
+  color: white;
+  font-size: var(--normal-font-size);
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.form-button:hover {
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.2);
+}
+
+.form-input:focus + .form-label {
+  top: -.5rem;
+  left: .8rem;
+  color: var(--button-color);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+
+.form-input:not(:placeholder-shown).form-input:not(:focus) + .form-label {
+  top: -.5rem;
+  left: .8rem;
+  color: var(--button-color);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+
+.form-input:focus {
+  border: 1.5px solid var(--button-color);
+}

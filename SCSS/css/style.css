@@ -1,0 +1,39 @@
+.container .section-1 {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+.container .section-1 button {
+  background-color: blue;
+}
+.container .section-1 button:hover {
+  background-color: white;
+}
+.container .section-2, .container .section-4 {
+  width: 300px;
+  height: 200px;
+  background-color: lightblue;
+}
+.container .section-2 button, .container .section-4 button {
+  background-color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.container .section-2 button::after, .container .section-4 button::after {
+  content: "Hello";
+}
+.container .section-3 {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+.container .section-3 button {
+  background-color: yellow;
+}
+.container .section-4 p {
+  font-weight: bold;
+  font-size: 6rem;
+}
+.container .section-4 {
+  width: 400px;
+}/*# sourceMappingURL=style.css.map */

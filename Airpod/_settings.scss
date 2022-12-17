@@ -1,0 +1,25 @@
+@import "variables";
+
+*, *::after, *::before{
+box-sizing: border-box;}
+
+body{
+	font-family: $body-font;
+	background-color: $white-color;
+	color: $first-color;
+	margin: 0;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+h3, p{
+  margin: 0;
+}

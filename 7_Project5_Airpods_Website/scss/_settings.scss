@@ -1,0 +1,26 @@
+@import "variables";
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $body-font;
+  background-color: $white-color;
+  color: $first-color;
+}
+
+h3, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

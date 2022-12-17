@@ -1,0 +1,63 @@
+@import "section-2/section";
+@import "variables/color";
+
+@mixin section($width, $height) {
+	width: $width;
+	height: $height;
+	background-color: $background;
+
+}
+
+.container {
+	.section-1 {
+		@include section(100px, 100px);
+
+		button {
+			background-color: blue;
+
+			&:hover {
+				background-color: white;
+			}
+		}
+	}
+
+	.section-2 {
+		@include section(300px, 200px);
+
+		button {
+			background-color: $btn-color;
+
+			&::after {
+				content: "Hello";
+			}
+
+			font: {
+				size: 1.5rem;
+				weight: bold;
+			}
+		}
+	}
+
+	.section-3 {
+		@include section(100px, 100px);
+
+		button {
+			background-color: yellow;
+		}
+	}
+
+	%ptext {
+		font: {
+			weight:bold;
+			size: 6rem;
+		}
+	}
+
+	.section-4 {
+		@extend .section-2;
+		width: 400px;
+		p{
+			@extend	%ptext;
+		}
+	}
+}

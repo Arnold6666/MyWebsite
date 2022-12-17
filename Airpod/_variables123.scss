@@ -1,0 +1,45 @@
+// Header
+$header-height: 3rem;
+
+// colores
+$first-color: #1d1d1d;
+$second-color: #0071E3;
+$black-color: #111;
+$white-color: #fff;
+$bg-color: #FAFAFA;
+
+// Fonts
+$body-font: 'Roboto', sans-serif;
+
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$fonr-bold: 700;
+
+// Font size
+:root {
+  --biggest-font-size: 2.5rem;
+  --bigger-font-size: 2.25rem;
+  --big-font-size: 1.5rem;
+  --normal-font-size: 1.25rem;
+  --smaller-font-size: .75rem;
+
+  @media screen and (min-width: 768px) {
+    --biggest-font-size: 3.5rem;
+    --bigger-font-size: 3rem;
+    --big-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .9rem;
+  }
+}
+
+// Line height
+$line-height-medium: 2rem;
+$line-height-smaller: 1.3rem;
+$line-height-smallest: 1rem;
+
+
+// z-index
+$z-back: -10;
+$z-normal: 1;
+$z-fixed: 100;

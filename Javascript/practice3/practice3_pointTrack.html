@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>追蹤滑鼠軌跡</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div id="ball">
+    <div class="halo"></div>
+    <div class="halo"></div>
+    <div class="halo"></div>
+  </div>
+  <script src="js/Ball.js"></script>
+  <script>
+    const ball = document.getElementById("ball");
+    const myBall = new Ball(ball);
+
+    myBall.diameter = parseInt(getCssValue(ball, "width"));
+
+    document.addEventListener("mousemove", e => {
+      myBall.mouseX = e.clientX;
+      myBall.mouseY = e.clientY;
+    });
+
+    function getCssValue(element, cssName){
+      const root_style = getComputedStyle(element);
+      return root_style.getPropertyValue(cssName);
+    }
+
+    function convertToBall(x, d){
+      x = x - d / 2;
+      return x;
+    }
+
+    function delayMotion() { 
+
+      let pos_x = convertToBall(myBall.mouseX, myBall.diameter);
+      let pos_y = convertToBall(myBall.mouseY, myBall.diameter);
+
+      ball.style.transform = `translate(${pos_x}px,${pos_y}px)`; //parseFloat轉為浮點數
+
+      requestAnimationFrame(delayMotion);
+    }
+
+    // 先request，若瀏覽器有空執行後邊的funciton，且執行之function不用帶括號
+    requestAnimationFrame(delayMotion);
+  </script>
+</body>
+
+</html>

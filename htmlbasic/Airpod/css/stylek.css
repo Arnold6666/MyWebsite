@@ -16,18 +16,14 @@
   }
 }
 
-*, ::after, ::before {
+*, *::after, *::before {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: "Roboto", sans-serif;
   background-color: #FFF;
   color: #1D1D1F;
-}
-
-h3, p {
   margin: 0;
 }
 
@@ -41,6 +37,10 @@ a {
   text-decoration: none;
 }
 
+h3, p {
+  margin: 0;
+}
+
 .fixed-header {
   width: 100%;
   position: fixed;
@@ -50,32 +50,40 @@ a {
   background-color: #111;
   opacity: 0.95;
 }
-
-.nav {
+.fixed-header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fixed-header a {
+  text-decoration: none;
+}
+.fixed-header .nav {
   text-align: center;
   margin: 0 2rem;
   height: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
 }
-.nav-logo {
+.fixed-header .nav-logo {
   color: #FFF;
   font-weight: 300;
   font-size: var(--big-font-size);
 }
 @media screen and (max-width: 768px) {
-  .nav-menu {
+  .fixed-header .nav-menu {
     display: none;
   }
 }
-.nav-link {
+.fixed-header .nav-link {
   color: #FFF;
 }
-.nav-btn {
+.fixed-header .nav-btn {
   background-color: #0071E3;
-  border-radius: 1rem;
   color: #FFF;
+  border-radius: 1rem;
   padding: 0.375rem 1rem;
 }
 
@@ -117,20 +125,21 @@ a {
   width: 150px;
   height: 350px;
   margin-right: 1rem;
+  transform: translateY(-6%);
 }
 
 .airpod1 {
-  -webkit-animation: airpod1 3s infinite;
-          animation: airpod1 3s infinite;
+  -webkit-animation: airpod1 3s infinite 1.5s;
+          animation: airpod1 3s infinite 1.5s;
 }
 @-webkit-keyframes airpod1 {
   50% {
-    transform: translatey(-6%);
+    transform: translateY(6%);
   }
 }
 @keyframes airpod1 {
   50% {
-    transform: translatey(-6%);
+    transform: translateY(6%);
   }
 }
 
@@ -140,12 +149,12 @@ a {
 }
 @-webkit-keyframes airpod2 {
   50% {
-    transform: translatey(6%);
+    transform: translateY(6%);
   }
 }
 @keyframes airpod2 {
   50% {
-    transform: translatey(6%);
+    transform: translateY(6%);
   }
 }
 
@@ -190,27 +199,26 @@ a {
   line-height: 1rem;
 }
 .details-img {
-  display: flex;
-  justify-content: center;
   padding-top: 2.5rem;
   padding-bottom: 10rem;
+  display: flex;
+  justify-content: center;
 }
 .details-img img {
   width: 218px;
 }
-
-.airpods {
+.details .airpods {
   -webkit-animation: airpods 3s infinite;
           animation: airpods 3s infinite;
 }
 @-webkit-keyframes airpods {
   50% {
-    transform: translatey(-6%);
+    transform: translateY(6%);
   }
 }
 @keyframes airpods {
   50% {
-    transform: translatey(-6%);
+    transform: translateY(6%);
   }
 }
 
@@ -226,6 +234,7 @@ a {
   }
   .home {
     height: 1600px;
+    background-color: #FAFAFA;
   }
   .home-data {
     padding-top: 10rem;
@@ -234,8 +243,8 @@ a {
     font-weight: 500;
   }
   .home-description, .details .data-description {
-    font-size: var(--big-font-size);
     font-weight: 300;
+    font-size: var(--big-font-size);
     line-height: 2rem;
   }
   .home-img img {
@@ -243,9 +252,6 @@ a {
        object-fit: scale-down;
     width: 450px;
     height: 900px;
-  }
-  .details-description {
-    line-height: 1.3rem;
   }
   .details-img img {
     width: 300px;
@@ -256,39 +262,4 @@ a {
     max-width: 1200px;
     margin: 0 auto;
   }
-}/*# sourceMappingURL=style.css.map */ap: 4rem;
-}
-section.second .container .characters-container div h2 {
-  margin: 0;
-  font-size: 3rem;
-}
-section.second .container .characters-container div h2 span {
-  font-size: 1.5rem;
-}
-section.second .container .characters-container div p {
-  margin: 8px 0;
-  text-align: center;
-}
-section.second .container .product-container {
-  width: 100%;
-}
-section.second .container .product-container .container-img {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-section.second .container .product-container .container-img img {
-  height: 300px;
-  -webkit-animation: move 2s forwards infinite alternate;
-          animation: move 2s forwards infinite alternate;
-}
-@media screen and (max-width: 767px) {
-  section.second .container .product-container .container-img img {
-    height: 200px;
-  }
-}
-@keyframes move {
-  100% {
-    transform: translateY(30px);
-  }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=stylek.css.map */

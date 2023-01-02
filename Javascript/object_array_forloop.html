@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Learming Javascript <small>object_array_forloop</small></h1>
+  <script>
+
+    // const person = {
+    //   name: "Ken",
+    //   age: 21,
+    // }
+
+    // for(const property in person){
+    //   console.log(`${property}: ${person[property]}`);
+    // }
+
+    // const numbers = [5, 6, 9];
+
+    // for(const number of numbers){
+    //   console.log(number);
+    // }
+
+    // numbers.forEach((value, index) => {
+    //   console.log(value);
+    //   console.log(index);
+    // });
+
+    class Person{
+
+      constructor (_name, _age) {
+        this.name = _name;
+        this.age = _age;
+      }
+
+      describe(){
+        console.log(`I am ${this.name} and I am ${this.age} years old`);
+      }
+    }
+
+    class Programmer extends Person{ //繼承後者的屬性，並且可以額外自訂意義謝所需的屬性
+      constructor (_name, _age, _yearOfExperience){
+        super(_name, _age);
+
+        this.yearOfExperience = _yearOfExperience;
+      }
+
+      code(){
+        console.log(`${this.name} is coding`);
+      }
+      
+    }
+
+    const Programmers = [
+      new Programmer("Ken", 21, 12),
+      new Programmer("Jeff", 31, 10)
+    ]
+
+    // for (const prog of Programmers) {
+    //   prog.code();
+    // }
+
+    // Programmers.forEach(value => value.code())
+      
+    
+
+    // let person_1 = new Person("Ken", 21);
+    // let programmer_1 = new Programmer("Jeff", 31, 10);
+
+    // console.log(person_1);
+    // console.log(programmer_1);
+
+    // person_1.code();
+
+  </script>
+</body>
+
+</html>

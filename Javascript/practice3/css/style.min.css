@@ -1,0 +1,1 @@
+:root{--factor: 1}body{background-color:#0a0000}#ball,#ball .halo{width:40px;height:40px;border-radius:50%;background-color:#fbd771;position:absolute}#ball .halo{opacity:.15}#ball .halo:nth-of-type(1){--factor:0.3}#ball .halo:nth-of-type(2){--factor:0.6}#ball .halo:nth-of-type(3){--factor:0.9}/*# sourceMappingURL=style.min.css.map */

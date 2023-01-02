@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Learming Javascript</h1>
+  <script>
+
+    class Circle { //class 定義首字要大寫
+
+      constructor(_radius = 5,_color = "red"){ //contructor 會在建立此類物件的新物件時運行一次
+
+        console.log("This Circle is being created")
+        this.radius = _radius;
+        this.color = _color;
+
+      }; 
+
+      static equalSize(a, b) {
+        return 2 * Math.PI * a.radius === 2 * Math.PI * b.radius;
+      }
+
+      static equalColor(a, b) {
+        return a.color === b.color;
+      }
+    }
+
+    let circle_1 = new Circle();
+    let circle_2 = new Circle();
+    let circle_3 = new Circle(8, "blue");
+    let circle_4 = new Circle(6, "orange");
+
+    let result = Circle.equalSize(circle_1, circle_3);
+    console.log(result);
+
+    console.log(Circle.equalColor(circle_1, circle_2));
+
+  </script>
+</body>
+
+</html>

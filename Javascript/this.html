@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Learming Javascript</h1>
+  <script>
+
+    function printOut(){
+      console.log(this);
+    }
+
+    // printOut();
+
+    const myTitle = document.getElementsByTagName("h1")[0];
+
+    myTitle.addEventListener("click", printOut.bind({
+      radius: 10,
+      color: "gold",
+    }))
+
+    class Circle { //class 定義首字要大寫
+
+      constructor(_radius = 5,_color = "red"){ //contructor 會在建立此類物件的新物件時運行一次
+
+        console.log("This Circle is being created")
+        this.radius = _radius;
+        this.color = _color;
+
+      }; 
+
+      getArea(){
+        return 2 * this.radius * Math.PI;
+      }
+
+      printFunc(){
+        setTimeout(function(){
+          console.log(this.radius);
+        },100);
+      }
+
+      printArrowFunc(){
+        setTimeout(() => console.log(this.radius), 100);
+      }
+    }
+
+    let circle_1 = new Circle();
+    let circle_2 = new Circle();
+    let circle_3 = new Circle(8, "blue");
+    let circle_4 = new Circle(6, "orange");
+
+    // console.log(circle_3.getArea());
+    // console.log(circle_4.getArea());
+
+    circle_3.printFunc(); //指向windows
+    circle_3.printArrowFunc(); //指向該物件Object
+  </script>
+</body>
+
+</html>

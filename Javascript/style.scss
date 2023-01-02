@@ -1,0 +1,20 @@
+@import "./variables";
+
+body{
+    background-color: $bg_color;
+    color: $font_color;
+
+    p {
+        font-weight: bold;
+    }
+
+    #box{
+        width: $box_size;
+        height: $box_size;
+        background-color: red;
+        position: relative;
+        display: none; 
+    }
+
+
+}

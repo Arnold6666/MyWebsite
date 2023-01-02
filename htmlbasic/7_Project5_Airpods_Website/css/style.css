@@ -256,39 +256,4 @@ a {
     max-width: 1200px;
     margin: 0 auto;
   }
-}/*# sourceMappingURL=style.css.map */ap: 4rem;
-}
-section.second .container .characters-container div h2 {
-  margin: 0;
-  font-size: 3rem;
-}
-section.second .container .characters-container div h2 span {
-  font-size: 1.5rem;
-}
-section.second .container .characters-container div p {
-  margin: 8px 0;
-  text-align: center;
-}
-section.second .container .product-container {
-  width: 100%;
-}
-section.second .container .product-container .container-img {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-section.second .container .product-container .container-img img {
-  height: 300px;
-  -webkit-animation: move 2s forwards infinite alternate;
-          animation: move 2s forwards infinite alternate;
-}
-@media screen and (max-width: 767px) {
-  section.second .container .product-container .container-img img {
-    height: 200px;
-  }
-}
-@keyframes move {
-  100% {
-    transform: translateY(30px);
-  }
 }/*# sourceMappingURL=style.css.map */

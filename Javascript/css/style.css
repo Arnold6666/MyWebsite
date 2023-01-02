@@ -1,0 +1,14 @@
+body {
+  background-color: rgba(255, 94, 100, 0.5);
+  color: #FF3864;
+}
+body p {
+  font-weight: bold;
+}
+body #box {
+  width: 140px;
+  height: 140px;
+  background-color: red;
+  position: relative;
+  display: none;
+}/*# sourceMappingURL=style.css.map */

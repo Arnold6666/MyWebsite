@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style media="screen">
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learming Javascript</h1>
+    <!-- <div class="box" onmouseover="alert('Hover!')" onclick="alert('Hello, Ken')"></div> -->
+    <div class="box"></div>
+    <script>
+        const box = document.getElementsByClassName('box')[0];
+
+        // function handelBoxClick(){
+        //     console.log("Hello, Ken!")
+        // }
+
+        box.addEventListener("click",(e) => console.log(e.offsetX));
+
+        function sum(a, b){
+            return a+b;
+        }
+
+        console.log(sum(4,5));
+
+        let arrow_sum = (a, b) => {
+            return a+b;
+        }
+
+        console.log(arrow_sum(3,5));
+
+        function isPositive(number){
+            return number >=0;
+        }
+
+        console.log(isPositive(5));
+
+        let is_Positive = number => number >=0;
+
+        console.log(is_Positive(-1));
+
+        function randomNumber(){
+            return Math.random();
+        }
+
+        console.log(randomNumber());
+
+        let random_number = () => Math.random();
+
+        console.log(random_number());
+    </script>
+</body>
+</html>

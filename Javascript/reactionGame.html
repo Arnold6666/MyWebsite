@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>考反應遊戲</title>
+</head>
+
+<body>
+  <h1>考考您的反應</h1>
+  <p>反應時間: <span id="time">0</span>秒</p>
+  <div id="box"></div>
+  <script>
+
+    var box = document.getElementById('box');
+    var title = document.getElementsByTagName('h1')[0];
+    var paragraph = document.getElementsByTagName('p')[0];
+    var time = document.getElementById('time');
+
+    // var createdTime = 0;
+    // var clickedTime = 0;
+    // var reactionTime = 0;
+
+    function get_fulheight(block){
+      var height = block.offsetHeight;
+      var style = window.getComputedStyle(block);
+      height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+      return height;
+      // console.log(height);
+    }
+
+    function get_randomRange(min, max){
+      var diff = max - min;
+      var rand = Math.random();
+      rand = Math.floor(rand * diff) + 1 + min;
+      return rand;
+    }
+
+    function makebox() {
+
+      var time = Math.random();
+      time = Math.floor(time * 2000) + 1;
+
+      setTimeout(function () {
+
+        if(Math.random() > 0.5){
+          box.style.borderRadius = "70px";
+        }else{
+          box.style.borderRadius = "0px";
+        }
+
+        var green = get_randomRange(50,200);
+        // console.log(green);
+        var color = "rgba(255, " + green + ", 100, 1.0)";
+
+        box.style.backgroundColor = color;
+        box.style.display = "block";
+
+        var box_size = get_fulheight(box);
+        var h1_size = get_fulheight(title);
+        var p_size = get_fulheight(paragraph);
+        var remain_height = box_size + h1_size + p_size;
+
+        console.log(remain_height);
+
+        var top = Math.floor(Math.random() * (window.innerHeight - remain_height) + 1);
+        var left = Math.floor(Math.random() * (window.innerWidth - box_size) + 1);
+
+        box.style.top = top + "px";
+        box.style.left = top + "px";
+        
+        createdTime = Date.now();
+      }, time);
+
+    } 
+
+    box.onclick = function () {
+      box.style.display = "none";
+
+      clickedTime = Date.now(); //1970/01/01
+      reactionTime = (clickedTime - createdTime) / 1000;
+
+      document.getElementById('time').innerHTML = reactionTime;
+
+      makebox();
+    };
+
+    makebox();
+
+  </script>
+</body>
+
+</html>

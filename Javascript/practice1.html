@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Javascript</title>
+  <style media="screen">
+    #canvas {
+      border: 1px solid #d3d3d3;
+    }
+
+    .text::after{
+      content: "After text";
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Learning Javascript</h1>
+  <canvas id="canvas" width="300" height="300"></canvas>
+  <div class="text">Above it is a canvas.</div>
+  <p></p>
+  <script>
+
+    // var random =  Math.floor(Math.random() * 10) + 1; //1-10
+    var min = 4;
+    var max = 10;
+    var diff = max - min + 1;
+    var range_random = Math.floor(Math.random() * diff) + min;
+    console.log(range_random);
+
+    // function defRange(min,max){
+      // max = Math.floor(Math.random() * max) + 1;
+      // min = Math.floor(Math.random() * min); 
+      // console.log(max);
+      // return max - min;
+    // }
+    // defRange(3,7)
+    // console.log(defRange(3,7));
+
+    // var canvas = document.getElementById('canvas');
+    // var canvasObj = window.getComputedStyle(canvas);
+    // canvas.style.width = "400px";
+    // console.log(canvasObj.width);
+
+    // var text = document.getElementsByClassName('text')[0]; //因同一class可能會指向多個元素，因此透過索引值取得特定元素。
+    // var textObj = window.getComputedStyle(text, "::after");
+    // console.log(textObj.backgroundColor);
+
+    // var circle2 = new Object();
+    // circle2.x = 50;
+    // circle2.y = 30;
+    // circle2.diameter = 20;
+
+    // var circle = {
+    //   x: 100,
+    //   y: 75,
+    //   diameter: 100,
+    //   get_better_diameter: function (a, dia) {
+    //     if (dia > a) {
+    //       return 75;
+    //     } else {
+    //       return dia;
+    //     }
+    //   },
+    // }
+
+    // create_circle(circle2.x, circle.y, circle2.diameter)
+
+    // var x = 100;
+    // var y = 75;
+    // var diameter = 100;
+
+    // function get_better_diameter(a, dia = 20){
+    //   if(dia > a){
+    //     return diameter = 75;
+
+    //   }else{
+    //     return diameter = dia;
+    //   }
+    // }
+
+    // function create_circle(a, b, dia) {
+    //   var canvas = document.getElementById('canvas');
+    //   var ctx = canvas.getContext("2d");
+
+    //   ctx.fillStyle = "orange";
+
+    //   ctx.arc(a, b, dia, 0, 2 * Math.PI);
+    //   ctx.fill();
+    // }
+
+    // circle.diameter = circle.get_better_diameter(circle.y, circle.diameter);
+    // console.log(circle.diameter);
+    // create_circle(circle.x, circle.y , circle.diameter);
+  </script>
+
+</body>
+
+</html>

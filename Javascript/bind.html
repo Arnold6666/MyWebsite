@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>what is bind?</title>
+</head>
+<body>
+  <script>
+    let o1 = {
+      x: 3,
+      y: 6
+    }
+
+    function printCoordiantes(){
+      console.log(this.x + ", " + this.y)
+    }
+
+    window.x = 9;
+    window.y = 10;
+
+    printCoordiantes();
+
+    let o1_funciton = printCoordiantes.bind(o1);
+    o1_funciton();
+  </script>
+</body>
+</html>

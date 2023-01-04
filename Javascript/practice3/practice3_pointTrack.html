@@ -20,35 +20,22 @@
     const ball = document.getElementById("ball");
     const myBall = new Ball(ball);
 
-    myBall.diameter = parseInt(getCssValue(ball, "width"));
+    // myBall.diameter = parseInt(Ball.getCssValue(ball, "width")); //原方法
+    let rect = ball.getBoundingClientRect(); //新方法
+    // console.log(typeof(rect.width));
+    myBall.diameter = rect.width;
+
+    // console.log(myBall.diameter);
+
+    const halos = document.getElementsByClassName("halo");
 
     document.addEventListener("mousemove", e => {
       myBall.mouseX = e.clientX;
       myBall.mouseY = e.clientY;
     });
 
-    function getCssValue(element, cssName){
-      const root_style = getComputedStyle(element);
-      return root_style.getPropertyValue(cssName);
-    }
-
-    function convertToBall(x, d){
-      x = x - d / 2;
-      return x;
-    }
-
-    function delayMotion() { 
-
-      let pos_x = convertToBall(myBall.mouseX, myBall.diameter);
-      let pos_y = convertToBall(myBall.mouseY, myBall.diameter);
-
-      ball.style.transform = `translate(${pos_x}px,${pos_y}px)`; //parseFloat轉為浮點數
-
-      requestAnimationFrame(delayMotion);
-    }
-
     // 先request，若瀏覽器有空執行後邊的funciton，且執行之function不用帶括號
-    requestAnimationFrame(delayMotion);
+   myBall.delayMotion();
   </script>
 </body>
 

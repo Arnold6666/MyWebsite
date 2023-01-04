@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>queryselector</title>
+
+  <style media="screen">
+
+  </style>
+</head>
+
+<body>
+
+  <h1>happy new year</h1>
+  <h1 id="title">Queryselector</h1>
+
+  <div id="container1">
+    <div class="box">Container 1 - Box 1</div>
+  </div>
+  <div id="container2">
+    <div class="box">Container 2 - Box 2</div>
+  </div>
+
+  <script>
+    const container2 = document.querySelector("#container2");
+    const result = container2.querySelector(".box");
+    console.log(result);
+  </script>
+
+</body>
+
+</html>

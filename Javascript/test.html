@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  搜尋：<input type="search" id="search"><button id="btn" style="margin-left:1rem;">搜尋</button>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt sint exercitationem beatae iusto
+    voluptas quam? Repellendus rem repellat temporibus accusantium quod eos hic. Labore animi error, distinctio,
+    nesciunt, quod ut corporis porro quia nihil harum minima aut cumque quidem eos debitis! Corrupti quam debitis
+    adipisci labore, ut consequatur numquam aliquam eligendi voluptates vero eum fugiat perspiciatis quo iste! Modi,
+    nemo id ad odit quam optio molestias repudiandae corporis eos alias totam, eligendi a, exercitationem sequi quidem
+    accusantium labore! Iste amet illo tempora architecto distinctio dolore quaerat nihil dolores quia! Qui expedita
+    perferendis officiis corrupti quisquam, mollitia vel maxime et harum ad odio perspiciatis totam eveniet, quasi
+    consectetur! Molestias, minus nostrum nisi facere expedita ipsum est dolore sapiente numquam libero praesentium
+    deserunt quam dolorum iste voluptatum voluptas minima! Distinctio ad libero in exercitationem inventore dicta magni,
+    enim impedit nesciunt eum, quaerat ex suscipit dolor praesentium cum! Pariatur, deleniti a. Voluptate ratione,
+    explicabo tempora labore fugit velit earum. Omnis excepturi minima explicabo placeat nihil dolores? At alias
+    pariatur inventore iure beatae tempore porro voluptates quidem architecto voluptatibus minima suscipit molestiae
+    neque cumque, numquam assumenda unde nobis, dolor reiciendis repellat? Fuga soluta, minus consequatur enim culpa
+    saepe quas impedit, rem iure asperiores cupiditate doloremque, ipsa beatae mollitia voluptates adipisci incidunt
+    itaque delectus distinctio consectetur blanditiis omnis? Voluptatem consequatur in animi repudiandae provident,
+    consequuntur laborum accusantium deserunt libero ipsum totam ducimus dignissimos dicta unde ipsa adipisci autem
+    numquam temporibus explicabo possimus laboriosam! Sit at quas molestias, assumenda perferendis quaerat debitis,
+    labore illo blanditiis omnis alias atque ipsam maxime perspiciatis architecto tenetur consectetur magnam?
+    Repellendus ad, animi facilis delectus doloribus eius optio ex nisi, dicta molestias ducimus quos dolores voluptatem
+    omnis impedit a voluptatibus beatae id maxime. Nulla ullam totam non quod voluptatibus a facere consequatur officia
+    repellendus praesentium. A ad non voluptates illo!</p>
+  <script>
+    zoo = ["獅子", "老虎", "大象", "長頸鹿"];
+    num = [9, 5, 2, 7];
+    // for(i = 0; i < zoo.length; i++){
+    //   console.log("動物園有" + zoo[i]);
+    // }
+
+    // for(i in zoo){
+    //   console.log("動物園有" + zoo[i]);
+    // }
+
+    // for(animal of zoo){
+    //   console.log("動物園有" + animal);
+    // }
+
+    // zoo.forEach(animal => {
+    //   console.log("動物園有" + animal);
+    // });
+
+    // zoo.push("兔子");
+    // zoo.pop();
+
+    // zoo.unshift("兔子");
+    // zoo.shift();
+    // console.log(zoo);
+
+    // console.log(zoo.indexOf("大象"));
+    // console.log(num.reverse(num.sort()));
+
+    // let str = "apple in not pinapple";
+    document.getElementById('btn').onclick = function () {
+      let search = document.getElementById("search").value;
+      let change = document.getElementsByTagName("p")[0];
+      // console.log();
+      let result = change.innerHTML.replaceAll(`${search}`, `<span style="background-color: gold;">${search}</span>`);
+      change.innerHTML = result;
+    }
+
+
+
+
+  </script>
+</body>
+
+</html>

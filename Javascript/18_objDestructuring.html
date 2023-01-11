@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object destructuring</title>
+
+  <style media="screen">
+
+  </style>
+</head>
+
+<body>
+
+  
+  <script>
+    const user = {
+      name: "Alex",
+      age: 38,
+      salary: 666,
+      address: "15th Park Avenue",
+      department: {
+        name: "Tom",
+        shift: "morning",
+        address: {
+          city: "Bangalore",
+          street: "7th Residency Rd",
+          zip: 560001
+        }
+      }
+    }
+
+    const {department: {address: {street}}} = user; //建立address的別名 建立別名後無法用原名呼叫
+    console.log(street);
+
+    // let salary = user.salary ? user.salary : 123456;
+
+    // function printDetails({name, age}){
+    //   console.log(`This name is ${name} and they are ${age}`)
+    // }
+    
+    // let name = user.name
+    // let age = user.age
+
+    // let {name, age} = user;
+
+    // console.log(name, age);
+
+    // printDetails(user);
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spread syntax</title>
+
+  <style media="screen">
+
+  </style>
+</head>
+
+<body>
+  
+  <script>
+
+    // 複製, 更新, 合併Object
+
+    // const user = {
+    //   name: "Alex",
+    //   age: 38,
+    //   address: "15th Park Avenue",
+    // }
+
+    // const clone = {...user};
+    // console.log(clone);
+    // console.log(clone==user);
+
+    // let updatedUser = {...user, salary: 12345}
+    // console.log(updatedUser)
+    
+    // updatedUser = {...user, age: 56, salary: 12345};
+    
+    // console.log(updatedUser)
+    // function sum(...args){
+    //   return args
+    // }
+
+    // const numbers = [3, 27, 3]
+    // const result = sum(...numbers)
+
+    // console.log(result)
+
+    // let a = [1, 2]
+    // let numbers = [3, 4, 5]
+    // a = a.concat(numbers);
+    // a =[...a, ...numbers]
+
+    // console.log(a);
+
+    // let str = "Hello";
+    // let a = str.split("");
+    // let a = [...str];
+    // console.log(a)
+
+    // let a = [1, 2, 3, 4];
+    // a = Math.max(...a);
+    // console.log(a);
+
+    // const user = {
+    //   name: "Alex",
+    //   age: 38,
+    //   salary: 666,
+    //   address: "15th Park Avenue",
+    //   department: {
+    //     name: "Tom",
+    //     shift: "morning",
+    //     address: {
+    //       city: "Bangalore",
+    //       street: "7th Residency Rd",
+    //       zip: 560001
+    //     }
+    //   }
+    // }
+
+    // const updated = {
+    //   ...user,
+    //   department: {
+    //     ...user.department,
+    //     number: 10
+    //   }
+    // }
+
+    // console.log(updated)
+
+    const user = {
+      name: "Alex",
+      age: 38,
+      address: "15th Park Avenue",
+    }
+
+    let department = {
+      id: "001",
+      shift: "Morning"
+    }
+
+    let completeDetails = {...user, ...department};
+    console.log(completeDetails)
+
+    department = {
+      name: "Tom",
+      shift: "Morning"
+    }
+
+    completeDetails = {...user, ...department};
+    console.log(completeDetails)
+  </script>
+
+</body>
+
+</html>

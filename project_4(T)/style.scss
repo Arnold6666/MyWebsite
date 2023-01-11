@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+
+@import "settings";
+
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: $first-color;
+  z-index: $z-fixed;
+}
+
+.nav{
+  margin: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $header-height;
+  font-size: $normal-font-size;
+  font-weight: $font-medium;
+
+  &_logo{
+    & img{
+      width: 120px;
+    }
+  }
+
+  &_menu{
+    display: none;
+  }
+
+  &_toggle{
+    display: flex;
+  }
+
+}
+
+@media screen and (min-width:1200px){
+  .nav{
+    &_menu{
+      display: flex;
+    }
+    
+    &_list{
+      display: flex;
+    }
+
+    &_item{
+      margin-left: 2rem;
+    }
+  
+    &_toggle{
+      display: none;
+    }
+
+    &_link{
+      color: $first-color;
+    }
+  }
+}
